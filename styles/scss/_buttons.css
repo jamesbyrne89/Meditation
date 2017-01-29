@@ -1,0 +1,10 @@
+.btn-start {
+	margin-top: 50px;
+	background: transparent;
+	color: white;
+	padding: 1em 1.25em;
+	border-radius: 22px;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	border: solid 4px rgba(255,255,255,0.8);
+}

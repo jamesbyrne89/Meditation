@@ -1,3 +1,5 @@
+
+
 $coral: coral;
 $teal: #70b29c;
 
@@ -40,7 +42,19 @@ body {
 	font-size: 2.25rem;
 	letter-spacing: 1em;
 	text-align: center;
-	margin-top: 20%;
+}
+
+.logo {
+	opacity: 1;
+	position: absolute;
+	top: 6em;
+	left: 10em;
+	width: 32px;
+}
+
+.visible {
+	display: block !important;
+	transition: all 3s;
 }
 
 h1{
@@ -59,10 +73,33 @@ h1{
 	border: solid 4px rgba(255,255,255,0.8);
 }
 
+#time {
+	font-family: 'raleway', helvetica;
+}
+
+.seconds {
+	font-family: 'raleway', helvetica;
+}
+
+
 footer {
-	font-size: 1.25rem;
+	font-size: 0.875rem;
 	text-transform: none;
 	letter-spacing: normal;
 	margin-top: 200px;
+}
+
+
+/* Spotify Player */
+
+.spotify {
+	left: 10px;
+	top: 10px;
+	display: none;
+
+}
+
+.track-list, #extra {
+	height: 45px !important;
 }
 
