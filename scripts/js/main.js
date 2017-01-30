@@ -1,12 +1,20 @@
-$('.btn-start').on('click', function(){
+function intro(){
+
+$('h1').delay(300).fadeIn(1500);
+function showButton(){
+$('footer').delay(500).fadeIn('slow').delay(1000).fadeOut(1500);
 	$('.btn-start').fadeOut('slow');
 	$('h1').fadeOut('slow');
-	$('.spotify').addClass('visible');
+	$('.spotify').delay(2000).fadeIn(1500);
 	$('#time').fadeIn('slow');
-});
+};
+};
 
+intro();
 
-
+function blink(){
+	$('.seconds').fadeOut(50).fadeIn(500);
+}
 
    // Declare variables
 
@@ -27,7 +35,7 @@ $('.btn-start').on('click', function(){
 
 $('.btn-start').on('click', function (){
   if (!started) {
-    startTimer();
+    startTimer(currentSession);
     $('.btn-start').text('Pause');
   }
   else if (started) {
@@ -47,10 +55,14 @@ function startTimer(currentSession) {
     seconds--;
     minutes = Math.floor(seconds / 60);
     remainderSeconds = seconds % 60;
-    $('.seconds').fadeOut(50).fadeIn(500);
+    let progressPerc = (seconds/(currentSession * 60)*100);
+    $('.progress').css('width', progressPerc+'%');
+           
+    blink();
 if (seconds <= 0) {
   clearInterval(countDown);
   playSound();
+  
 }
 displayTime();
 
@@ -62,6 +74,7 @@ displayTime();
 function displayTime() {
  $('#time').text(`${minutes}:`);
  $(".seconds").text(`${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`);
+
 
  if (minutes == currentSession) {
   
@@ -85,7 +98,7 @@ sessionLength.textContent=(currentSession);
 // Play a sound when timer has finished
 
       function playSound() {
-        var sound = new Audio('Magic_Wand_Noise.mp3');
+        var sound = new Audio('sounds/Magic_Wand_Noise.mp3');
         sound.play();
       }
 
@@ -102,3 +115,4 @@ const resetTimer =  $('btn-start').on('click', () =>{
     started = false;
     startTimerButton.textContent=('Start');
 });
+
