@@ -1,20 +1,16 @@
-function intro(){
 
-$('h1').delay(300).fadeIn(1500);
-function showButton(){
-$('footer').delay(500).fadeIn('slow').delay(1000).fadeOut(1500);
-	$('.btn-start').fadeOut('slow');
-	$('h1').fadeOut('slow');
-	$('.spotify').delay(2000).fadeIn(1500);
+$('h1').delay(300).fadeIn(1500, function (){
+$('footer').delay(500).fadeIn(1500).delay(1000).fadeOut(1500);
+	$('.btn-start').fadeIn('slow');
 	$('#time').fadeIn('slow');
-};
-};
+	$('h1').fadeOut('slow');
+	$('.main-holder').delay(800).fadeIn(1500);
+	$('.progress').fadeIn(500);
+	$('.progress').delay(5000).addClass('full-width');
+});
 
-intro();
 
-function blink(){
-	$('.seconds').fadeOut(50).fadeIn(500);
-}
+
 
    // Declare variables
 
@@ -28,20 +24,16 @@ function blink(){
 
 
 
-
 // Start the timer
-
-
-
 $('.btn-start').on('click', function (){
   if (!started) {
     startTimer(currentSession);
-    $('.btn-start').text('Pause');
+    $('.btn-start').text('Pause session');
   }
   else if (started) {
     clearInterval(countDown);
     started = false;
-    $('.btn-start').text('Start');
+    $('.btn-start').text('Resume session');
   }
 });
 
@@ -57,8 +49,7 @@ function startTimer(currentSession) {
     remainderSeconds = seconds % 60;
     let progressPerc = (seconds/(currentSession * 60)*100);
     $('.progress').css('width', progressPerc+'%');
-           
-    blink();
+
 if (seconds <= 0) {
   clearInterval(countDown);
   playSound();
@@ -116,3 +107,60 @@ const resetTimer =  $('btn-start').on('click', () =>{
     startTimerButton.textContent=('Start');
 });
 
+
+// Increase or decrease length of session
+
+$('#minus-five').on('click', function(){
+
+	if(currentSession>=6){
+			currentSession = currentSession-5;
+			console.log(currentSession);
+	$('#time').text(currentSession+'.00');
+	minutes = currentSession;
+	displayTime();
+
+	}
+	else {
+		return
+	}
+	
+});
+
+$('#minus-one').on('click', function(){
+	if(currentSession>=2){
+			currentSession = currentSession-1;
+			console.log(currentSession);
+			seconds = currentSession * 60; 
+remainderSeconds = seconds % 60; 
+	$('#time').text(currentSession+'.00');
+	minutes = currentSession;
+	displayTime();
+	}
+	else {
+		return
+	}
+});
+
+$('#plus-five').on('click', function(){
+			currentSession = currentSession+5;
+			console.log(currentSession);
+			seconds = currentSession * 60; 
+remainderSeconds = seconds % 60; 
+	$('#time').text(currentSession+'.00');
+	minutes = currentSession;
+	displayTime();
+});
+
+$('#plus-one').on('click', function(){
+			currentSession = currentSession+1;
+			console.log(currentSession);
+			seconds = currentSession * 60; 
+remainderSeconds = seconds % 60; 
+	$('#time').text(currentSession+'.00');
+	minutes = currentSession;
+	displayTime();
+});
+
+function blink(){
+	$('.seconds').fadeOut(100).fadeIn(500);
+}
