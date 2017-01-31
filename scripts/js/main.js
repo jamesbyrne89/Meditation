@@ -1,16 +1,15 @@
 
-$('h1').delay(300).fadeIn(1500, function (){
-$('footer').delay(500).fadeIn(1500).delay(1000).fadeOut(1500);
+$('h1').delay(300).fadeIn(2500, function (){
+$('h1').fadeOut(1500);
 	$('.btn-start').fadeIn('slow');
 	$('#time').fadeIn('slow');
-	$('h1').fadeOut('slow');
-	$('.main-holder').delay(800).fadeIn(1500);
+	
+	$('.main-holder').delay(2000).fadeIn(1000);
 	$('.progress').fadeIn(500);
 	$('.progress').delay(5000).addClass('full-width');
 });
 
-
-
+$('footer').delay(300).fadeIn(2500).fadeOut(1500);
 
    // Declare variables
 
