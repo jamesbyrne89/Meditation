@@ -1,12 +1,16 @@
+$(document).ready(function(){
 
-$('h1').delay(300).fadeIn(2500, function (){
-$('h1').fadeOut(1500);
+$('#splash-text').delay(300).fadeIn(2500, function (){
+$('#splash-text').fadeOut(1500);
 	$('.btn-start').fadeIn('slow');
-	$('#time').fadeIn('slow');
+	$('#clock').fadeIn('slow');
 	
 	$('.main-holder').delay(2000).fadeIn(1000);
-	$('.progress').fadeIn(500);
-	$('.progress').delay(5000).addClass('full-width');
+	$('.progress').fadeIn(500).delay(3000).queue(function(fullWidth){
+
+		$('.progress').delay(2000).addClass('full-width');
+		fullWidth();
+	});
 });
 
 $('footer').delay(300).fadeIn(2500).fadeOut(1500);
@@ -62,8 +66,8 @@ displayTime();
 // Show the timer
 
 function displayTime() {
- $('#time').text(`${minutes}:`);
- $(".seconds").text(`${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`);
+ $('#mins').text(`${minutes}:`);
+ $("#seconds").text(`${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`);
 
 
  if (minutes == currentSession) {
@@ -163,3 +167,4 @@ remainderSeconds = seconds % 60;
 function blink(){
 	$('.seconds').fadeOut(100).fadeIn(500);
 }
+});

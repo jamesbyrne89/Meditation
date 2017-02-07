@@ -6,13 +6,13 @@
         <title>M E D I T A T I O N</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="/styles/css/build/styles.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="/styles/build/styles.css">
     </head>
     <body>
     <div class="bg-overlay">
@@ -20,7 +20,7 @@
     <main class="content-wrapper">
     
     
-       <h1>Meditation</h1>
+       <h1 class="splash-text" id="splash-text">Meditation</h1>
            <footer>
     Created by James Byrne
     </footer>
@@ -29,17 +29,17 @@
               <div class="bar">
        <div class="progress"></div>
       </div>
-      <div class="timer-wrapper">
-      <div class="btn-wrapper">
-          <button class="btn-adjust" id="minus-five" >- 5</button>
-          <button class="btn-adjust" id="minus-one" >-</button>
+      <div class="timer">
+      <div class="timer__btn-wrapper">
+          <button class="btn-adjust--minus-five" id="minus-five" >- 5</button>
+          <button class="btn-adjust--minus-one" id="minus-one" >-</button>
       </div>    
-          <div class="clock">
-           <time id='time'>10.00</time><span class="seconds"></span>
-           </div>
-           <div class="btn-wrapper">
-           <button class="btn-adjust" id="plus-one" >+</button>
-           <button class="btn-adjust" id="plus-five" >+ 5</button>
+          <time class="time">
+           <span id="mins" class='mins'>10:</span><span id="seconds" class="seconds">00</span>
+           </time>
+           <div class="timer__btn-wrapper">
+           <button class="btn-adjust--plus-one" id="plus-one" >+</button>
+           <button class="btn-adjust--plus-five" id="plus-five" >+ 5</button>
            </div>
        </div>
        <button class="btn-start">Start session</button>
