@@ -46,8 +46,6 @@ body {
 	display: none;
 }
 
-
-
 .visible {
 	display: block !important;
 	transition: all 3s;
