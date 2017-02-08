@@ -26,8 +26,12 @@
 	border: none;
 	border-radius: 30% 0 0 30%;
 	border: solid 2px #fff;
-	padding: 0.75em 1em;
+	padding: 0.5em 1em;
 	font-size: 1rem;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
+	}
 }
 
 .btn-adjust--plus-five {
@@ -39,9 +43,12 @@
 	border: none;
 	border-radius: 0 30% 30% 0;
 	border: solid 2px #fff;
-	padding: 0.75em 1em;
+	padding: 0.5em 1em;
 	font-size: 1rem;
-
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
+	}	
 }
 
 .btn-adjust--minus-one, .btn-adjust--plus-one {
@@ -52,8 +59,12 @@
 	flex: 0 0 auto;
 	border: none;
 	border: solid 2px #fff;
-	padding: 0.75em 1em ;
+	padding: 0.5em 1em ;
 	font-size: 1.25rem;
 	margin: 0 10px;
 	line-height: 0.5em;
-}
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
+	}
+	}

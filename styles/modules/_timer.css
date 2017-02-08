@@ -8,18 +8,18 @@
 
 
 .time {
-	width: 4em;
+	width: 10em;
 	text-align: center;
 }
 
-.mins {
+.time__mins {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
 	font-size: 2.75rem;
 	text-align: center;
 }
 
-.seconds {
+.time__seconds {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
 	font-size: 2.75rem;

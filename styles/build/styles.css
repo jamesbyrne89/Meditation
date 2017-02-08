@@ -17,12 +17,58 @@ dt, dd, blockquote, address{
 	margin-right: -0.5em;
 }
 
-footer {
+.splash-text__subtitle {
 	font-size: 0.875rem;
 	text-transform: none;
 	letter-spacing: normal;
 	margin-top: 50px;
 	display: none;
+}
+
+body {
+	
+	background: url('/images/min/1-isiwubmiw-kimon-maritz.jpg');
+	background-size: cover;
+	height: 100vh;
+	z-index: 5;
+}
+
+.bg-overlay {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	background: teal; /* fallback for old browsers */
+	background: -webkit-linear-gradient(bottom left, teal 55%, #64f38c);
+	background: linear-gradient(to top right, teal 55%, #64f38c); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: 0.7;
+	z-index: 10;
+	height: 100vh;
+	width: 100vw;
+	}
+
+.intro-wrapper {
+
+	height: auto;
+	background: transparent;
+	text-transform: uppercase;
+	color: white;
+	font-family: 'playfair display', serif;
+	font-size: 2.25rem;
+	letter-spacing: 1em;
+	text-align: center;
+}
+
+.app-wrapper {
+	width: 30%;	
+	display: none;
+	color: white;
+	text-align: center;
 }
 
 .logo {
@@ -76,18 +122,18 @@ footer {
 }
 
 .time {
-	width: 4em;
+	width: 10em;
 	text-align: center;
 }
 
-.mins {
+.time__mins {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
 	font-size: 2.75rem;
 	text-align: center;
 }
 
-.seconds {
+.time__seconds {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
 	font-size: 2.75rem;
@@ -141,8 +187,14 @@ footer {
 	border: none;
 	border-radius: 30% 0 0 30%;
 	border: solid 2px #fff;
-	padding: 0.75em 1em;
+	padding: 0.5em 1em;
 	font-size: 1rem;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-adjust--minus-five:hover {
+    box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 }
 
 .btn-adjust--plus-five {
@@ -156,9 +208,14 @@ footer {
 	border: none;
 	border-radius: 0 30% 30% 0;
 	border: solid 2px #fff;
-	padding: 0.75em 1em;
+	padding: 0.5em 1em;
 	font-size: 1rem;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;	
+}
 
+.btn-adjust--plus-five:hover {
+    box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 }
 
 .btn-adjust--minus-one, .btn-adjust--plus-one {
@@ -171,18 +228,14 @@ footer {
 	        flex: 0 0 auto;
 	border: none;
 	border: solid 2px #fff;
-	padding: 0.75em 1em ;
+	padding: 0.5em 1em ;
 	font-size: 1.25rem;
 	margin: 0 10px;
 	line-height: 0.5em;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	}
+
+.btn-adjust--minus-one:hover, .btn-adjust--plus-one:hover {
+    box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 }
-
-body{background:url(/images/min/1-isiwubmiw-kimon-maritz.jpg);background-size:cover;height:100vh;z-index:1}
-
-.bg-overlay{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:teal;background:-webkit-linear-gradient(bottom left,teal 55%,#64f38c);background:linear-gradient(to top right,teal 55%,#64f38c);opacity:.7;z-index:2;height:100vh;width:100vw}
-
-.content-wrapper{width:30%;height:auto;background:transparent;text-transform:uppercase;color:#fff;font-family:playfair display,serif;font-size:2.25rem;letter-spacing:1em;text-align:center}
-
-.main-holder{display:none}
-
-.visible{display:block!important;-webkit-transition: all 3s;transition:all 3s}

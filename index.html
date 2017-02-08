@@ -17,14 +17,15 @@
     <body>
     <div class="bg-overlay">
     <img class="logo" src="images/JB-logo.png">
-    <main class="content-wrapper">
+    <div class="intro-wrapper">
     
     
        <h1 class="splash-text" id="splash-text">Meditation</h1>
-           <footer>
+           <h2 id="subtitle" class="splash-text__subtitle">
     Created by James Byrne
-    </footer>
-       <div class="main-holder">
+    </h2>
+    </div>
+       <main id="app" class="app-wrapper">
        <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify_uk_%3Aplaylist%3A00XAjSa5jB0MNX56tIKMq0" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
               <div class="bar">
        <div class="progress"></div>
@@ -35,20 +36,17 @@
           <button class="btn-adjust--minus-one" id="minus-one" >-</button>
       </div>    
           <time class="time">
-           <span id="mins" class='mins'>10:</span><span id="seconds" class="seconds">00</span>
+           <span id="mins" class='time__mins'>10:</span><span id="seconds" class="time__seconds">00</span>
            </time>
            <div class="timer__btn-wrapper">
            <button class="btn-adjust--plus-one" id="plus-one" >+</button>
            <button class="btn-adjust--plus-five" id="plus-five" >+ 5</button>
            </div>
        </div>
-       <button class="btn-start">Start session</button>
+       <button id="start" class="btn-start">Start session</button>
 
 </div>
-
-
     </main>
-    </div>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="scripts/js/main.js"></script>

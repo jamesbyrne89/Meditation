@@ -1,29 +1,35 @@
 $(document).ready(function(){
 
-$('#splash-text').delay(300).fadeIn(2500, function (){
-$('#splash-text').fadeOut(1500);
-	$('.btn-start').fadeIn('slow');
-	$('#clock').fadeIn('slow');
-	
-	$('.main-holder').delay(2000).fadeIn(1000);
-	$('.progress').fadeIn(500).delay(3000).queue(function(fullWidth){
-
-		$('.progress').delay(2000).addClass('full-width');
-		fullWidth();
-	});
-});
-
-$('footer').delay(300).fadeIn(2500).fadeOut(1500);
-
-   // Declare variables
-
+// Declare variables
   let currentSession = 10;
   let seconds = currentSession * 60; 
   let minutes = Math.floor(seconds / 60);
   let breakTime = 5;
   let remainderSeconds = seconds % 60; 
   let started = false;
-  let countDown;
+  let countDown;	
+
+// Intro animation
+$('#subtitle').delay(300).fadeIn(2500).fadeOut(1500);
+$('#splash-text').delay(300).fadeIn(2500, function (){
+
+$('#splash-text').fadeOut(1500);
+	$('#start').fadeIn('slow');
+	$('#clock').fadeIn('slow');
+	
+	$('#app').delay(2000).fadeIn(1000);
+	$('.progress').fadeIn(500).delay(2500).queue(function(fullWidth){
+
+		$('.progress').addClass('full-width');
+		fullWidth();
+	});
+});
+
+
+
+   
+
+
 
 
 
