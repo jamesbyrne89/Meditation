@@ -1,1 +1,188 @@
-@import "../../base/_reset.css";@import "../../base/_variables.css";@import "../../modules/_intro.css";@import "../../modules/_logo.css";@import "../../modules/_progress-bar.css";@import "../../modules/_timer.css";@import "../../modules/_spotify.css";@import "../../modules/_buttons.css";body{background:url(/images/min/1-isiwubmiw-kimon-maritz.jpg);background-size:cover;height:100vh;z-index:1}.bg-overlay{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:teal;background:-webkit-linear-gradient(bottom left,teal 55%,#64f38c);background:linear-gradient(to top right,teal 55%,#64f38c);opacity:.7;z-index:2;height:100vh;width:100vw}.content-wrapper{width:30%;height:auto;background:transparent;text-transform:uppercase;color:#fff;font-family:playfair display,serif;font-size:2.25rem;letter-spacing:1em;text-align:center}.main-holder{display:none}.visible{display:block!important;-webkit-transition:all 3s;transition:all 3s}
+/* Reset */
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
+dt, dd, blockquote, address{
+    margin: 0;
+    padding: 0;
+}
+
+.splash-text {
+	font-size: 2.25rem;
+	font-family: 'open sans', helvetica;
+	display: none;
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	margin-left: 0.5em;
+	margin-right: -0.5em;
+}
+
+footer {
+	font-size: 0.875rem;
+	text-transform: none;
+	letter-spacing: normal;
+	margin-top: 50px;
+	display: none;
+}
+
+.logo {
+	opacity: 1;
+	position: absolute;
+	top: 6em;
+	left: 10em;
+	width: 32px;
+}
+
+.bar {
+	width: 100%;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.full-width {
+	width: 100% !important;
+	-webkit-transition: all 1s !important;
+	transition: all 1s !important;
+}
+
+.progress{
+    width: 0;
+    height: 4px;
+    display: none;
+    background-color: white;
+    background-position: 00%;
+    float: left;
+    margin: 50px auto 0 auto;
+    box-shadow: 2px 2px 20px 2px;
+    opacity: 1;
+    border-radius: 2px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.timer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 50px;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: auto;
+}
+
+.time {
+	width: 4em;
+	text-align: center;
+}
+
+.mins {
+	font-family: 'open sans', helvetica;
+	letter-spacing: 0.25em;
+	font-size: 2.75rem;
+	text-align: center;
+}
+
+.seconds {
+	font-family: 'open sans', helvetica;
+	letter-spacing: 0.25em;
+	font-size: 2.75rem;
+	text-align: center;
+}
+
+/* Spotify Player */
+
+.spotify {
+	left: 10px;
+	top: 10px;
+
+}
+
+.track-list, #extra {
+	height: 45px !important;
+}
+
+.timer__btn-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 100px;
+	        flex: 0 0 100px
+}
+
+.btn-start {
+	font-size: 0.875rem;
+	width: 240px;
+	margin-top: 50px;
+	background: transparent;
+	color: white;
+	padding: 1em 1.25em;
+	border-radius: 22px;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	border: solid 4px rgba(255,255,255,0.8);
+}
+
+.btn-adjust--minus-five {
+	background: transparent;
+	color: #fff;
+	font-weight: bold;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	border: none;
+	border-radius: 30% 0 0 30%;
+	border: solid 2px #fff;
+	padding: 0.75em 1em;
+	font-size: 1rem;
+}
+
+.btn-adjust--plus-five {
+	
+	background: transparent;
+	color: #fff;
+	font-weight: bold;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	border: none;
+	border-radius: 0 30% 30% 0;
+	border: solid 2px #fff;
+	padding: 0.75em 1em;
+	font-size: 1rem;
+
+}
+
+.btn-adjust--minus-one, .btn-adjust--plus-one {
+
+	background: transparent;
+	color: #fff;
+	font-weight: bold;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	border: none;
+	border: solid 2px #fff;
+	padding: 0.75em 1em ;
+	font-size: 1.25rem;
+	margin: 0 10px;
+	line-height: 0.5em;
+}
+
+body{background:url(/images/min/1-isiwubmiw-kimon-maritz.jpg);background-size:cover;height:100vh;z-index:1}
+
+.bg-overlay{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:teal;background:-webkit-linear-gradient(bottom left,teal 55%,#64f38c);background:linear-gradient(to top right,teal 55%,#64f38c);opacity:.7;z-index:2;height:100vh;width:100vw}
+
+.content-wrapper{width:30%;height:auto;background:transparent;text-transform:uppercase;color:#fff;font-family:playfair display,serif;font-size:2.25rem;letter-spacing:1em;text-align:center}
+
+.main-holder{display:none}
+
+.visible{display:block!important;-webkit-transition: all 3s;transition:all 3s}

@@ -1,11 +1,11 @@
-@import '../../base/_reset.css';
-@import '../../base/_variables.css';
-@import '../../modules/_intro.css';
-@import '../../modules/_logo.css';
-@import '../../modules/_progress-bar.css';
-@import '../../modules/_timer.css';
-@import '../../modules/_spotify.css';
-@import '../../modules/_buttons.css';
+@import 'base/_reset.css';
+@import 'base/_variables.css';
+@import 'modules/_intro.css';
+@import 'modules/_logo.css';
+@import 'modules/_progress-bar.css';
+@import 'modules/_timer.css';
+@import 'modules/_spotify.css';
+@import 'modules/_buttons.css';
 
 
 body {
