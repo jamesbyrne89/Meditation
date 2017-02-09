@@ -27,7 +27,7 @@ dt, dd, blockquote, address{
 
 body {
 	
-	background: url('/images/min/1-isiwubmiw-kimon-maritz.jpg');
+	background: url('images/min/1-isiwubmiw-kimon-maritz.jpg');
 	background-size: cover;
 	height: 100vh;
 	z-index: 5;
@@ -88,7 +88,7 @@ body {
 }
 
 .full-width {
-	width: 100% !important;
+	width: 100% ;
 	-webkit-transition: all 1s !important;
 	transition: all 1s !important;
 }
