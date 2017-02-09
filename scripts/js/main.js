@@ -28,21 +28,20 @@ $('#splash-text').fadeOut(1500);
 
 
    
-
-
-
-
-
 // Start the timer
 $('.btn-start').on('click', function (){
-  if (!started) {
+  if (!started && seconds > 0) {
     startTimer(currentSession);
     $('.btn-start').text('Pause session');
   }
-  else if (started) {
+  else if (started && seconds > 0) {
     clearInterval(countDown);
     started = false;
     $('.btn-start').text('Resume session');
+  }
+  else if (seconds == 0) {	
+  	resetTimer();
+  	
   }
 });
 
@@ -57,12 +56,13 @@ function startTimer(currentSession) {
     minutes = Math.floor(seconds / 60);
     remainderSeconds = seconds % 60;
     let progressPerc = (seconds/(currentSession * 60)*100);
-    $('.progress').css('width', progressPerc+'%');
+    $('.progress').removeClass('full-width').css('width', progressPerc+'%');
 
 if (seconds <= 0) {
+	$('.btn-start').text('New session');
   clearInterval(countDown);
   playSound();
-  
+  $('.progress').css('opacity', '0');
 }
 displayTime();
 
@@ -99,22 +99,26 @@ sessionLength.textContent=(currentSession);
 
       function playSound() {
         var sound = new Audio('sounds/Magic_Wand_Noise.mp3');
+        sound.volume = 0.5;
         sound.play();
+
       }
 
 
 // Reset the timer
 
 
-const resetTimer =  $('btn-start').on('click', () =>{     
-    clearInterval(countDown);
+function resetTimer() {
+    
     minutes = currentSession;
     seconds = currentSession * 60;
     remainderSeconds = seconds % 60; 
      displayTime();
     started = false;
-    startTimerButton.textContent=('Start');
-});
+    $('.btn-start').text('Start session');
+    $('.progress').css('opacity', '1');
+    $('.progress').addClass('full-width')
+};
 
 
 // Increase or decrease length of session
@@ -123,7 +127,6 @@ $('#minus-five').on('click', function(){
 
 	if(currentSession>=6){
 			currentSession = currentSession-5;
-			console.log(currentSession);
 	$('#time').text(currentSession+'.00');
 	minutes = currentSession;
 	displayTime();
@@ -138,7 +141,6 @@ $('#minus-five').on('click', function(){
 $('#minus-one').on('click', function(){
 	if(currentSession>=2){
 			currentSession = currentSession-1;
-			console.log(currentSession);
 			seconds = currentSession * 60; 
 remainderSeconds = seconds % 60; 
 	$('#time').text(currentSession+'.00');
@@ -170,7 +172,4 @@ remainderSeconds = seconds % 60;
 	displayTime();
 });
 
-function blink(){
-	$('.seconds').fadeOut(100).fadeIn(500);
-}
 });

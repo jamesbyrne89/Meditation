@@ -6,20 +6,24 @@
 
 .btn-start {
 	font-size: 0.875rem;
-	width: 240px;
+	width: 250px;
 	margin-top: 50px;
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: white;
-	padding: 1em 1.25em;
+	padding: 1em ;
 	border-radius: 22px;
 	text-transform: uppercase;
-	letter-spacing: 0.25em;
+	letter-spacing: 0.375em;
 	border: solid 4px rgba(255,255,255,0.8);
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
+	}	
 }
 
 
 .btn-adjust--minus-five {
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	flex: 0 0 auto;
@@ -27,7 +31,8 @@
 	border-radius: 30% 0 0 30%;
 	border: solid 2px #fff;
 	padding: 0.5em 1em;
-	font-size: 1rem;
+	width: 60px;
+	font-size: 0.875rem;
 	transition: all 0.3s;
 	&:hover {
 		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
@@ -36,7 +41,7 @@
 
 .btn-adjust--plus-five {
 	
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	flex: 0 0 auto;
@@ -44,8 +49,9 @@
 	border-radius: 0 30% 30% 0;
 	border: solid 2px #fff;
 	padding: 0.5em 1em;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	transition: all 0.3s;
+	width: 60px;
 	&:hover {
 		box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 	}	
@@ -53,14 +59,14 @@
 
 .btn-adjust--minus-one, .btn-adjust--plus-one {
 
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	flex: 0 0 auto;
 	border: none;
 	border: solid 2px #fff;
 	padding: 0.5em 1em ;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	margin: 0 10px;
 	line-height: 0.5em;
 	transition: all 0.3s;

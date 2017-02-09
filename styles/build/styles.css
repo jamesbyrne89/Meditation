@@ -27,7 +27,7 @@ dt, dd, blockquote, address{
 
 body {
 	
-	background: url('images/min/1-isiwubmiw-kimon-maritz.jpg');
+	background: url('../../images/1-isiwubmiw-kimon-maritz.jpg');
 	background-size: cover;
 	height: 100vh;
 	z-index: 5;
@@ -46,7 +46,7 @@ body {
 	background: teal; /* fallback for old browsers */
 	background: -webkit-linear-gradient(bottom left, teal 55%, #64f38c);
 	background: linear-gradient(to top right, teal 55%, #64f38c); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	opacity: 0.7;
+	opacity: 0.8;
 	z-index: 10;
 	height: 100vh;
 	width: 100vw;
@@ -69,6 +69,8 @@ body {
 	display: none;
 	color: white;
 	text-align: center;
+	background: rgba(255,255,255,0.1);
+	padding: 1em 2em;
 }
 
 .logo {
@@ -88,9 +90,10 @@ body {
 }
 
 .full-width {
-	width: 100% ;
+	width: 100% !important;
 	-webkit-transition: all 1s !important;
 	transition: all 1s !important;
+    
 }
 
 .progress{
@@ -166,19 +169,25 @@ body {
 
 .btn-start {
 	font-size: 0.875rem;
-	width: 240px;
+	width: 250px;
 	margin-top: 50px;
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: white;
-	padding: 1em 1.25em;
+	padding: 1em ;
 	border-radius: 22px;
 	text-transform: uppercase;
-	letter-spacing: 0.25em;
+	letter-spacing: 0.375em;
 	border: solid 4px rgba(255,255,255,0.8);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;	
+}
+
+.btn-start:hover {
+    box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 }
 
 .btn-adjust--minus-five {
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	-webkit-box-flex: 0;
@@ -188,7 +197,8 @@ body {
 	border-radius: 30% 0 0 30%;
 	border: solid 2px #fff;
 	padding: 0.5em 1em;
-	font-size: 1rem;
+	width: 60px;
+	font-size: 0.875rem;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
@@ -199,7 +209,7 @@ body {
 
 .btn-adjust--plus-five {
 	
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	-webkit-box-flex: 0;
@@ -209,9 +219,10 @@ body {
 	border-radius: 0 30% 30% 0;
 	border: solid 2px #fff;
 	padding: 0.5em 1em;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	-webkit-transition: all 0.3s;
-	transition: all 0.3s;	
+	transition: all 0.3s;
+	width: 60px;	
 }
 
 .btn-adjust--plus-five:hover {
@@ -220,7 +231,7 @@ body {
 
 .btn-adjust--minus-one, .btn-adjust--plus-one {
 
-	background: transparent;
+	background: rgba(255,255,255,0.2);
 	color: #fff;
 	font-weight: bold;
 	-webkit-box-flex: 0;
@@ -229,7 +240,7 @@ body {
 	border: none;
 	border: solid 2px #fff;
 	padding: 0.5em 1em ;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	margin: 0 10px;
 	line-height: 0.5em;
 	-webkit-transition: all 0.3s;
