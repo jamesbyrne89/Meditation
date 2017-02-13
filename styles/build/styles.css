@@ -177,7 +177,7 @@ body {
 	border-radius: 22px;
 	text-transform: uppercase;
 	letter-spacing: 0.375em;
-	border: solid 4px rgba(255,255,255,0.8);
+	border: solid 2px rgba(255,255,255,0.8);
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;	
 }
@@ -194,10 +194,10 @@ body {
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
 	border: none;
-	border-radius: 30% 0 0 30%;
-	border: solid 2px #fff;
-	padding: 0.5em 1em;
-	width: 60px;
+	border-radius: 45% 0 0 45%;
+	border: solid 1px #fff;
+	padding: 0.5em 0em 0.5em 0.25em;
+	width: 50px;
 	font-size: 0.875rem;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -216,13 +216,13 @@ body {
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
 	border: none;
-	border-radius: 0 30% 30% 0;
-	border: solid 2px #fff;
-	padding: 0.5em 1em;
+	border-radius: 0 45% 45% 0;
+	border: solid 1px #fff;
+	padding: 0.5em 0.25em 0.5em 0em;
 	font-size: 0.875rem;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
-	width: 60px;	
+	width: 50px;	
 }
 
 .btn-adjust--plus-five:hover {
@@ -238,13 +238,14 @@ body {
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
 	border: none;
-	border: solid 2px #fff;
+	border: solid 1px #fff;
 	padding: 0.5em 1em ;
 	font-size: 1rem;
 	margin: 0 10px;
 	line-height: 0.5em;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
+	width: 45px;
 	}
 
 .btn-adjust--minus-one:hover, .btn-adjust--plus-one:hover {
