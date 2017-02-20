@@ -1,0 +1,21 @@
+body {
+	
+	background: url('../../images/1-isiwubmiw-kimon-maritz.jpg');
+	background-size: cover;
+	height: 100vh;
+	z-index: 5;
+}
+.bg-overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: teal; /* fallback for old browsers */
+	background: -webkit-linear-gradient(bottom left, teal 55%, #64f38c);
+	background: -o-linear-gradient(bottom left, teal 55%, #64f38c);
+	background: linear-gradient(to top right, teal 55%, #64f38c); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: 0.8;
+	z-index: 10;
+	height: 100vh;
+	width: 100vw;
+	}
+

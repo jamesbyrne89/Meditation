@@ -1,0 +1,18 @@
+.splash-text {
+	font-size: 2.25rem;
+	font-family: 'open sans', helvetica;
+	display: none;
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	margin-left: 0.5em;
+	margin-right: -0.5em;
+}
+
+.splash-text__subtitle {
+	font-size: 0.875rem;
+	text-transform: none;
+	letter-spacing: normal;
+	margin-top: 50px;
+	display: none;
+}

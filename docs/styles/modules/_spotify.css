@@ -1,0 +1,11 @@
+/* Spotify Player */
+
+.spotify {
+	left: 10px;
+	top: 10px;
+
+}
+
+.track-list, #extra {
+	height: 45px !important;
+}

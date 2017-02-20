@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).load(function(){
 
 // Declare variables
   let currentSession = 10;
