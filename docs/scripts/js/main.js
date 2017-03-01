@@ -127,6 +127,8 @@ $('#minus-five').on('click', function(){
 
 	if(currentSession>=6){
 			currentSession = currentSession-5;
+			seconds = currentSession * 60; 
+	remainderSeconds = seconds % 60; 
 	$('#time').text(currentSession+'.00');
 	minutes = currentSession;
 	displayTime();
