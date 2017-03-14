@@ -10,6 +10,7 @@ $(window).load(function(){
   let countDown;	
 
 // Intro animation
+$('#logo').delay(300).fadeIn(2500);
 $('#subtitle').delay(300).fadeIn(2500).fadeOut(1500);
 $('#splash-text').delay(300).fadeIn(2500, function (){
 
