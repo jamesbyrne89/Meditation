@@ -1,5 +1,6 @@
 @import 'base/_reset.css';
 @import 'base/_variables.css';
+@import 'base/_mixins.css';
 @import 'modules/_intro.css';
 @import 'modules/_background.css';
 @import 'modules/_wrapper.css';

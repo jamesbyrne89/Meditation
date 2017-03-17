@@ -6,6 +6,8 @@ dt, dd, blockquote, address{
     padding: 0;
 }
 
+/****** MEDIA QUERIES ******/
+
 .splash-text {
 	font-size: 2.25rem;
 	font-family: 'open sans', helvetica;
@@ -27,7 +29,7 @@ dt, dd, blockquote, address{
 
 body {
 	
-	background: url('../../images/1-isiwubmiw-kimon-maritz.jpg');
+	background: url('/assets/images/1-isiwubmiw-kimon-maritz.jpg');
 	background-size: cover;
 	height: 100vh;
 	z-index: 5;
@@ -52,25 +54,34 @@ body {
 	width: 100vw;
 	}
 
-.intro-wrapper {
+@media (min-width: 700px){
 
-	height: auto;
-	background: transparent;
-	text-transform: uppercase;
-	color: white;
-	font-family: 'playfair display', serif;
-	font-size: 2.25rem;
-	letter-spacing: 1em;
-	text-align: center;
+    .intro-wrapper{
+        height: auto;
+        background: transparent;
+        text-transform: uppercase;
+        color: white;
+        font-family: 'playfair display', serif;
+        font-size: 2.25rem;
+        letter-spacing: 1em;
+        text-align: center;
+    }
 }
 
 .app-wrapper {
-	width: 30%;	
-	display: none;
-	color: white;
+		width: 90%;
+		color: white;
+		display: none;
 	text-align: center;
 	background: rgba(255,255,255,0.1);
 	padding: 1em 2em;
+}
+
+@media (min-width: 700px){
+
+    .app-wrapper{
+        width: 30%;
+    }
 }
 
 .logo {
@@ -251,3 +262,13 @@ body {
 .btn-adjust--minus-one:hover, .btn-adjust--plus-one:hover {
     box-shadow: 2px 2px 20px 2px rgba(255,255,255,0.5);
 }
+
+
+
+
+
+
+
+
+
+
