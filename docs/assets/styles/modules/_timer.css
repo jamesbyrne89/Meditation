@@ -8,20 +8,33 @@
 
 
 .time {
-	width: 10em;
+	width: 12em;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+		@mixin atMedium {
+		width: 10em;
+	}
 }
 
 .time__mins {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
-	font-size: 2.75rem;
+	font-size: 3rem;
 	text-align: center;
+	padding-left: 0.25em;
+	@mixin atMedium {
+		font-size: 2.75rem;
+	}	
 }
 
 .time__seconds {
 	font-family: 'open sans', helvetica;
 	letter-spacing: 0.25em;
-	font-size: 2.75rem;
+	font-size: 3rem;
 	text-align: center;
+	width: auto;
+	@mixin atMedium {
+		font-size: 2.75rem;
+	}	
 }

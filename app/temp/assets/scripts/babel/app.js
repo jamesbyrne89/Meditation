@@ -1,35 +1,35 @@
-$(window).load(function() {
+'use strict';
+
+$(window).load(function () {
 
   // Declare variables
-  let currentSession = 10;
-  let seconds = currentSession * 60;
-  let minutes = Math.floor(seconds / 60);
-  let breakTime = 5;
-  let remainderSeconds = seconds % 60;
-  let started = false;
-  let countDown;
+  var currentSession = 10;
+  var seconds = currentSession * 60;
+  var minutes = Math.floor(seconds / 60);
+  var breakTime = 5;
+  var remainderSeconds = seconds % 60;
+  var started = false;
+  var countDown = void 0;
 
   // Intro animation
   $('#logo').delay(300).fadeIn(2500);
   $('#subtitle').delay(300).fadeIn(2500).fadeOut(1500);
-  $('#splash-text').delay(300).fadeIn(2500, function() {
+  $('#splash-text').delay(300).fadeIn(2500, function () {
 
     $('#splash-text').fadeOut(1500);
     $('#start').fadeIn('slow');
     $('#clock').fadeIn('slow');
 
     $('#app').delay(2000).fadeIn(1000);
-    $('.progress').fadeIn(500).delay(2500).queue(function(fullWidth) {
+    $('.progress').fadeIn(500).delay(2500).queue(function (fullWidth) {
 
       $('.progress').addClass('full-width');
       fullWidth();
     });
   });
 
-
-
   // Start the timer
-  $('.btn-start').on('click', function() {
+  $('.btn-start').on('click', function () {
     if (!started && seconds > 0) {
       startTimer(currentSession);
       $('.btn-start').text('Pause session');
@@ -39,21 +39,19 @@ $(window).load(function() {
       $('.btn-start').text('Resume session');
     } else if (seconds == 0) {
       resetTimer();
-
     }
   });
-
 
   // Start session timer
 
   function startTimer(currentSession) {
     started = true;
     displayTime();
-    countDown = setInterval(() => {
+    countDown = setInterval(function () {
       seconds--;
       minutes = Math.floor(seconds / 60);
       remainderSeconds = seconds % 60;
-      let progressPerc = (seconds / (currentSession * 60) * 100);
+      var progressPerc = seconds / (currentSession * 60) * 100;
       $('.progress').removeClass('full-width').css('width', progressPerc + '%');
 
       if (seconds <= 0) {
@@ -63,24 +61,18 @@ $(window).load(function() {
         $('.progress').css('opacity', '0');
       }
       displayTime();
-
     }, 1000);
   }
 
   // Show the timer
 
   function displayTime() {
-    $('#mins').text(`${minutes}:`);
-    $("#seconds").text(`${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`);
+    $('#mins').text(minutes + ':');
+    $("#seconds").text('' + (remainderSeconds < 10 ? '0' : '') + remainderSeconds);
 
-
-    if (minutes == currentSession) {
-
-    }
+    if (minutes == currentSession) {}
     return;
   }
-
-
 
   function increaseTime(e) {
 
@@ -89,9 +81,8 @@ $(window).load(function() {
     seconds = currentSession * 60;
     remainderSeconds = seconds % 60;
     displayTime();
-    sessionLength.textContent = (currentSession);
+    sessionLength.textContent = currentSession;
   }
-
 
   // Play a sound when timer has finished
 
@@ -101,9 +92,7 @@ $(window).load(function() {
     });
     sound.volume = 0.5;
     sound.play();
-
   }
-
 
   // Reset the timer
 
@@ -117,13 +106,12 @@ $(window).load(function() {
     started = false;
     $('.btn-start').text('Start session');
     $('.progress').css('opacity', '1');
-    $('.progress').addClass('full-width')
+    $('.progress').addClass('full-width');
   };
-
 
   // Increase or decrease length of session
 
-  $('#minus-five').on('click', function() {
+  $('#minus-five').on('click', function () {
 
     if (currentSession >= 6) {
       currentSession = currentSession - 5;
@@ -132,14 +120,12 @@ $(window).load(function() {
       $('#time').text(currentSession + '.00');
       minutes = currentSession;
       displayTime();
-
     } else {
-      return
+      return;
     }
-
   });
 
-  $('#minus-one').on('click', function() {
+  $('#minus-one').on('click', function () {
     if (currentSession >= 2) {
       currentSession = currentSession - 1;
       seconds = currentSession * 60;
@@ -148,11 +134,11 @@ $(window).load(function() {
       minutes = currentSession;
       displayTime();
     } else {
-      return
+      return;
     }
   });
 
-  $('#plus-five').on('click', function() {
+  $('#plus-five').on('click', function () {
     currentSession = currentSession + 5;
     console.log(currentSession);
     seconds = currentSession * 60;
@@ -162,7 +148,7 @@ $(window).load(function() {
     displayTime();
   });
 
-  $('#plus-one').on('click', function() {
+  $('#plus-one').on('click', function () {
     currentSession = currentSession + 1;
     console.log(currentSession);
     seconds = currentSession * 60;
@@ -171,5 +157,4 @@ $(window).load(function() {
     minutes = currentSession;
     displayTime();
   });
-
 });

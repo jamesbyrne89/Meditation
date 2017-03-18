@@ -1,1 +1,0 @@
-$(".btn-start").on("click",function(){$(".btn-start").fadeOut("slow"),$("h1").fadeOut("slow"),$(".spotify").addClass("visible"),$("#time").fadeIn("slow")});

@@ -1,20 +1,29 @@
 .intro-wrapper {
-
 	height: auto;
 	background: transparent;
 	text-transform: uppercase;
 	color: white;
 	font-family: 'playfair display', serif;
 	font-size: 2.25rem;
-	letter-spacing: 1em;
+	letter-spacing: 0.5em;
 	text-align: center;
+	@mixin atMedium {
+		letter-spacing: 1em;
+}
 }
 
 .app-wrapper {
-	width: 30%;	
-	display: none;
+	width: 95%;
 	color: white;
+	display: none;
 	text-align: center;
 	background: rgba(255,255,255,0.1);
-	padding: 1em 2em;
+	padding: 1em 0.5em;		
+@mixin atMedium {
+	width: 70%;	
+	padding: 1em 2em;	
+}
+@mixin atLarge {
+	width: 30%;
+	}
 }
