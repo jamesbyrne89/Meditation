@@ -1,7 +1,12 @@
 .logo {
+
 	opacity: 1;
 	position: absolute;
+	top: 1.5em;
+	left: 1em;
+	width: 32px;
+	@mixin atMedium {
 	top: 6em;
 	left: 10em;
-	width: 32px;
+	}	
 }
