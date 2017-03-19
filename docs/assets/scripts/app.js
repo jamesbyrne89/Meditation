@@ -97,7 +97,7 @@ $(window).load(function() {
 
   function playSound() {
     var sound = new Howl({
-      src: ['sounds/Magic_Wand_Noise.mp3']
+      src: ['assets/sounds/Magic_Wand_Noise.mp3']
     });
     sound.volume = 0.5;
     sound.play();
